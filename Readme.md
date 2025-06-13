@@ -1,0 +1,1 @@
+A platform to manage social media accounts
