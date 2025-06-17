@@ -1,0 +1,298 @@
+@import "tailwindcss";
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+   }
+
+
+/* NavBar */
+nav{
+    background-color: transparent;
+    width: 100%;
+    /* padding: vh 20px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative
+}
+nav img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.userPic{
+    height: 70px;
+    width: 70px;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    float: right;
+}
+
+nav ul li{
+    text-decoration: none;
+    font-size: 24px;
+    padding: 8px 15px;
+}
+
+.naMe{
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    font-size: 38px;
+    font-weight: 600;
+}
+
+.coNnect{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+    margin-right: 10px;
+}
+
+.creAte{
+    color: #fff;
+    background-color: #212529;
+    border-radius: 15px;
+    padding: 8px 36px 8px 36px;
+    margin: 0px 10px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.doubt{
+    padding: 8px 0px;
+    margin: 0px 10px;
+}
+
+.profilePic{
+    padding: 8px 15px 8px 0px;
+    margin-left: 10px;
+}
+
+nav ul li#change:hover{
+    background-color: red;
+}
+#check{
+    display: none;
+}
+#checkBtn{
+    float: right;
+    line-height: 80px;
+    font-size: 20px;
+    display: none;
+}
+
+
+
+#check:checked ~ ul#right{
+    left: 0;
+}
+
+
+@media(max-width: 845px){
+    #checkBtn{
+        padding-right: 7.5px;
+        display: block;
+    }
+    nav ul#right{
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(245, 56, 56);
+        display: block;
+        text-align: center;
+        line-height: 50px;
+        padding-top: 20px;
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        transition: 0.5s linear;
+    }
+}
+
+@media(min-width:305px) and (max-width:430px){
+    nav{
+        height: 60px;
+        padding: 7px 10px;
+    }
+    nav ul li{
+        padding: 4px 4px;
+    }
+    nav ul#left label{
+        font-size: 16px;
+    }
+    nav ul#left img{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media(max-width: 305px){
+    .logo{
+        font-size: 25px;
+        margin-right: 20px;
+    }
+}
+
+
+/* Sidebar: */
+aside{
+    /* width: 500px; */
+    /* margin-top: 86px; */
+    position: relative;
+    /* top: 0;
+    left: 0;
+    bottom: 0; */
+    inset: 0 auto 0 0;
+    padding: 1rem;
+    width: 350px;
+    background-color: #212529;
+    border-radius: 0 30px 0 0;
+    /* overflow: auto; */
+}
+
+aside nav1 ul{
+    list-style: none;
+    display: flex;
+    align-items: start;
+    flex-flow: column;
+    gap: 0.35rem;
+}
+aside nav1 ul li{
+    width: 100%;
+}
+
+aside nav1 ul li ul{
+    list-style: none;
+    padding-left: 2.2rem;
+}
+/* aside nav1 ul li ul li{
+    width: 100%;
+} */
+aside nav1 ul li ul li a{
+    font-size: 15px;
+}
+
+
+aside nav1 ul li ul li ul{
+    padding-left: 1.5rem;
+}
+aside nav1 ul li ul li ul li a{
+    
+    font-size: 14px;
+}
+
+aside nav1 a{
+    /* width: 23.3vw; */
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.7rem 0.5rem;
+    padding-left: 20px;
+    font-size: 18px;
+    /* line-height: 1; */
+    color: #fff;
+    text-decoration: none;
+    transition:
+        background-color 0.25s ease-in-out,
+        color 0.25s ease-in-out;
+}
+
+aside nav1 a.active,
+aside nav1 a:hover,
+aside nav1 a:focus-visible{
+
+    outline: none;
+    background-image: linear-gradient(to right, #2E94FF, #2ED9FF);
+}
+
+
+/* .dropdownMenu01,
+.dropdownMenu02{
+    display: none;
+} */
+
+
+
+
+/* connect01 */
+.connectChannelContiner{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+h1#connectHeading{
+    font-size: 38px;
+    font-weight: 700;
+    color: #6C757D;
+}
+
+h3#connectSubHead{
+    font-size: 26px;
+    font-weight: 600;
+    color: #ADB5BD;
+}
+
+.card{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 60px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    text-align: center;
+}
+
+.card h4{
+    font-size: 23px;
+    margin-top: 1em;
+}
+.card span{
+    font-size: 20px;
+    color: #6C757D;
+}
+
+.gridContainer{
+    margin-top: 1em;
+    display: grid;
+    row-gap: 1.74vw;
+    column-gap: 2.31vw;
+    grid-template-columns: 19vw 19vw;
+    grid-template-rows: 19vw 19vw;
+}
+
+
+.iconContainer{
+    background: linear-gradient(#2E94FF, #2ED9FF);
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6.1vw;
+    height: 6.1vw;
+}
+
+.iconn{
+    font-size: 4.1vw;
+    color: white;
+    background-color: transparent;
+}
